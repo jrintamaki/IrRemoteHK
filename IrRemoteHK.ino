@@ -1,8 +1,12 @@
-  // put your setup code here, to run once:
+#include <IRremote.h>
+#include "HK3480NEC.h" //List of commands available
+IRsend irsend;
 
+void setup()
+{
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  irsend.sendNEC(VOL_UP, 32); //Sends command to receiver
+  delay(5000); //5 second delay between next command
 }
